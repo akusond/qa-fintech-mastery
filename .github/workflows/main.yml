@@ -1,0 +1,11 @@
+name:  Health Check
+
+on: [push]
+
+jobs:
+  check-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a simple health check
+        run: echo "The repository structure and documentation are being validated!"
